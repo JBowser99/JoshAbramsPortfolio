@@ -1,0 +1,221 @@
+:root {
+  --LightMode: rgb(198, 198, 198);
+  --DarkMode: rgb(16, 21, 26);
+}
+body {
+  background: var(--background-color);
+}
+body.light {
+  --background-color: var(--LightMode);
+}
+body.dark {
+  --background-color: var(--DarkMode);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.grid-background-1 {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0), rgba(9, 115, 237, 0.01));
+  background-size: cover;
+}
+.grid-background-2 {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0), rgba(11, 127, 171, 1), rgba(0, 31, 63, 0.8));
+  background-size: cover;
+}
+.grid-background-3 {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0), rgba(11, 127, 171, 1), rgba(0, 31, 63, 0.8));
+  background-size: cover;
+}
+.responsive-text {
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+}
+.responsive-button-text {
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+}
+.responsive-clamp {
+  width: clamp(200px, 80%, 800px);
+  height: auto;
+}
+
+.bgShadowlg {
+  box-shadow: 0 0 15px #000000;
+}
+
+.bgShadowsm {
+  box-shadow: 0 0 6px #000000;
+}
+
+.revealWrapper {
+  display: grid;
+  align-content: center;
+  min-height: 80vh;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+}
+.modalContainer {
+  background-color: rgba(191, 196, 212, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: auto;
+  height: auto;
+  width: 50%;
+  flex-direction: column;
+  transform: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+.modalRight {
+  width: 100%;
+}
+.closeBtn {
+  position: fixed;
+  cursor: pointer;
+  bottom: 10px;
+  Right: 10px;
+  color: rgb(255, 255, 255);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+.btnContainer {
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.btnContainer button {
+  width: 100%;
+  margin: .5rem;
+  padding: 16px 0;
+  border: none;
+  color: #fafafa;
+}
+@media screen and (max-width: 640px) {
+  .modalContainer {
+    background-color: rgba(191, 196, 212, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: auto;
+    height: auto;
+    width: 50%;
+    flex-direction: column;
+    transform: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+  img {
+    width: 100%;
+  }
+  .closeBtn {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.aboutCard {
+  box-shadow: 0 0 24px #000000;
+}
+
+.projcetCard {
+  max-width: 85vw;
+  box-shadow: 0 0 24px #000000;
+}
+
+.projectCard{
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 25px #000000;
+  /** Smooth transition from a greyish to a less greyish color **/
+  /** background-image:linear-gradient(to bottom right, rgba(83, 133, 209, 0.301), rgba(0, 255, 179, 0.596)); **/
+  /** This controls the blurring effect **/
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+
+  /* Adding our borders*/
+  border-radius: 30px;
+  height: 88vh;
+  width:100%;
+  margin-inline: auto;
+  /** Responsive layout **/
+  display: flex;
+  /** One element on top of the other **/
+  flex-direction: column;
+}
+
+.contactCard {
+  box-shadow: 0 0 25px #000000;
+  background: rgba(255, 255, 255, 0.25);
+  /** This controls the blurring effect **/
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+}
+.smallText {
+text-transform: uppercase;
+font-size: small;
+font-weight: bold;
+color: black;
+}
+.largeText {
+  text-transform: uppercase;
+  font-size: xx-large;
+  font-weight: bold;
+  color: black;
+}
+.nameBorders {
+  box-shadow: 0 0 25px #000000;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+.nameText {
+  color: black;
+  font-weight: 500;
+}
+.emailBorders {
+  box-shadow: 0 0 25px #000000;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+.emailText {
+  color: black;
+  font-weight: 500;
+}
+.messageBorders {
+  box-shadow: 0 0 25px #000000;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+.messageText {
+  color: black;
+  font-weight: 500;
+}
+.sendBorders {
+  box-shadow: 0 0 25px #000000;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  color: black;
+  font-weight: 500;
+}
