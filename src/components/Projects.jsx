@@ -58,7 +58,7 @@ const Projects = () => {
   }, []);
 
 return (
-  <section className="relative z-0 mt-20 bg-sky-200/20 border border-slate-950/20 rounded-xl backdrop-blur-xl flex flex-col overflow-hidden">
+  <section className="relative z-0 mt-20 bg-sky-200/20 border border-slate-500 rounded-2xl backdrop-blur-xl flex flex-col overflow-hidden">
     <div>
       <h2 className="mt-2 text-4xl font-extrabold text-center text-white uppercase tracking-wider">
         First Project
@@ -69,7 +69,7 @@ return (
     </div>
       {/* Project Display */}
       <div
-        className={`relative bg-slate-950/30 border border-slate-950/20 rounded-xl mx-4 p-1 flex flex-col items-center ${
+        className={`relative bg-slate-950/30 border border-slate-950/20 rounded-2xl mx-4 flex flex-col items-center ${
           isZoomed ? "cursor-pointer" : ""
         }`}
         onClick={() => isZoomed && setIsZoomed(false)}
@@ -77,7 +77,7 @@ return (
         <div className="relative w-full flex flex-col items-center transition-all duration-300">
           
 {/* Image Wrapper */}
-<div className="relative flex justify-center items-center overflow-hidden">
+<div className="relative flex justify-center items-center overflow-hidden p-0.5">
   <img
     src={images[currentIndex].src}
     alt={images[currentIndex].title}
@@ -175,14 +175,14 @@ return (
         {/* Image Title and Description */}
         <div className="text-center text-white">
           <h3 className="text-lg font-bold">{images[currentIndex].title}</h3>
-          <p className="text-gray-300 text-sm">{images[currentIndex].description}</p>
+          <p className="text-gray-300 text-sm p-4">{images[currentIndex].description}</p>
         </div>
       </div>
 
       {/* Project Summary */}
       <div className="bg-slate-950/30 border border-slate-950/20 rounded-xl flex flex-col p-4 sm:p-6 lg:p-8 mx-4 mt-4">
         <h3 className="text-xl font-bold text-white">Project Summary</h3>
-        <p className="text-gray-300 mt-2">
+        <p className="text-gray-300">
           Explore each project with a visually dynamic and interactive interface. Snappy transitions
           and smooth navigation ensure a professional and engaging user experience.
         </p>

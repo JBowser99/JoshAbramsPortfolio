@@ -41,8 +41,8 @@ const Timeline = () => {
   });
 
   return (
-    <div className="flex flex-col items-center py-10">
-      <div className="flex flex-col items-center space-y-10 w-full">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center space-y-4 w-full">
         
         {data.map((item, index) => (
           <div
@@ -51,13 +51,11 @@ const Timeline = () => {
             onMouseEnter={() => setActiveIndex(index)}
             onMouseLeave={() => setActiveIndex(null)}
             className={`
-              transition-all duration-500 ease-in-out
-              w-[90%] md:w-4/5 lg:w-3/5
-              bg-white/10 border border-white/10 backdrop-blur-lg 
-              p-6 rounded-2xl shadow-xl
+              transition-all duration-500 ease-in-out  
+              rounded-2xl shadow-black/40 shadow-md p-2 border-2 border-white/5
               ${inView && activeIndex === index 
-                ? 'scale-[1.03] opacity-100' 
-                : 'scale-[0.98] opacity-80'
+                ? 'scale-[1.00] opacity-100' 
+                : 'scale-[0.95] opacity-100'
               }
             `}
           >

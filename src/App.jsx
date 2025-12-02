@@ -44,7 +44,7 @@ function App() {
                 <Navbar />
 
                 {/* Hero section with background card */}
-                <div className="max-w-[85vw] max-h-[70vh] bg-sky-200/20 border border-slate-950/20 rounded-xl backdrop-blur-xl mx-auto flex flex-col overflow-hidden mt-32">
+                <div className="max-w-[85vw] max-h-[70vh] bg-sky-200/20 border border-slate-500 rounded-xl backdrop-blur-xl mx-auto flex flex-col overflow-hidden mt-32">
                   <Linkedln />
                   <Hero />
 

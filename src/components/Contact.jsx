@@ -47,13 +47,9 @@ const Contact = () => {
   };
 
   return (
-  <section className="relative z-0 mt-20 bg-sky-200/20 border border-slate-950/20 rounded-xl backdrop-blur-lg mx-2 flex flex-col overflow-hidden py-10">
-    
-    <h2 className="text-4xl font-extrabold text-center text-white uppercase tracking-wider mb-6">
-      Get in Touch
-    </h2>
-
-    <div className="bg-slate-950/40 border border-slate-950/30 rounded-2xl p-6 mx-4 shadow-xl backdrop-blur-xl">
+  <section className="relative z-0 mt-20 bg-sky-200/20 border border-slate-500 rounded-2xl backdrop-blur-lg mx-2 flex flex-col overflow-hidden">
+    <h2 className="text-3xl font-bold text-center text-white uppercase mt-4">Get In Touch</h2>
+    <div className="bg-slate-950/30 border border-slate-950/20 rounded-2xl p-4 mx-4 my-4">
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -62,7 +58,7 @@ const Contact = () => {
 
         {/* NAME INPUT */}
         <div className="relative group">
-          <label className="absolute -top-3 left-5 bg-slate-950/40 px-2 text-white text-sm tracking-wide rounded-md">
+          <label className="absolute -top-3 -left-2 bg-slate-950/5 shadow-black/40 shadow-sm rounded-2xl border-2 border-white/5 px-2 text-white text-sm tracking-wide">
             Name
           </label>
           <input
@@ -72,16 +68,12 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Type your name..."
             className="
-              bg-sky-200/25 
+              bg-slate-950/5 p-2 shadow-black/40 shadow-md rounded-2xl border-2 border-white/5
               text-white
               placeholder:text-white/60 
-              backdrop-blur-sm
               mt-4
               py-6 px-6 
-              rounded-xl 
-              outline-none 
-              border border-white/10
-              focus:border-sky-300/60
+              outline-none
               transition-all
               w-full
             "
@@ -91,7 +83,7 @@ const Contact = () => {
 
         {/* EMAIL INPUT */}
         <div className="relative group">
-          <label className="absolute -top-3 left-5 bg-slate-950/40 px-2 text-white text-sm tracking-wide rounded-md">
+          <label className="absolute -top-3 -left-2 bg-slate-950/5 shadow-black/40 shadow-sm rounded-2xl border-2 border-white/5 px-2 text-white text-sm tracking-wide">
             Email
           </label>
           <input
@@ -101,16 +93,12 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Type your email..."
             className="
-              bg-sky-200/25 
+              bg-slate-950/5 p-2 shadow-black/40 shadow-md rounded-2xl border-2 border-white/5
               text-white
               placeholder:text-white/60 
-              backdrop-blur-sm
               mt-4
-              py-4 px-6 
-              rounded-xl 
-              outline-none 
-              border border-white/10
-              focus:border-sky-300/60
+              py-6 px-6 
+              outline-none
               transition-all
               w-full
             "
@@ -120,7 +108,7 @@ const Contact = () => {
 
         {/* MESSAGE INPUT */}
         <div className="relative group">
-          <label className="absolute -top-3 left-5 bg-slate-950/40 px-2 text-white text-sm tracking-wide rounded-md">
+          <label className="absolute -top-3 -left-2 bg-slate-950/5 shadow-black/40 shadow-sm rounded-2xl border-2 border-white/5 px-2 text-white text-sm tracking-wide">
             Message
           </label>
           <textarea
@@ -130,41 +118,33 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Type your message..."
             className="
-              bg-sky-200/25 
+              bg-slate-950/5 p-2 shadow-black/40 shadow-md rounded-2xl border-2 border-white/5
               text-white
               placeholder:text-white/60 
-              backdrop-blur-sm
               mt-4
-              py-4 px-6 
-              rounded-xl 
-              outline-none 
-              border border-white/10
-              focus:border-sky-300/60
+              py-6 px-6 
+              outline-none
               transition-all
               w-full
-              resize-none
             "
             required
           />
         </div>
-
+      </form>
+    </div>
+    <div className="flex justify-center mt-0 mb-4">
         {/* SEND BUTTON */}
         <button
           type="submit"
           disabled={loading}
           className="
-            mt-2 mx-auto 
-            text-white font-bold 
-            bg-gradient-to-r from-blue-500 to-purple-500 
-            px-10 py-4 
-            rounded-full 
-            hover:from-purple-500 hover:to-blue-500 
-            transition-all
+            mx-auto 
             shadow-lg
             disabled:opacity-60 
             disabled:cursor-not-allowed
-            flex items-center justify-center
-            w-[50%] md:w-[25%]
+            justify-center
+            w-[30%] md:w-[15%]
+            flex items-center space-x-2 text-white font-bold bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full hover:from-purple-500 hover:to-blue-500 transition
           "
         >
           {loading ? (
@@ -173,8 +153,7 @@ const Contact = () => {
             "SEND"
           )}
         </button>
-      </form>
-    </div>
+      </div>
   </section>
   );
 };
