@@ -130,30 +130,30 @@ const Contact = () => {
             required
           />
         </div>
+        <div className="flex justify-center -mt-4 mb-0">
+          {/* SEND BUTTON */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="
+              mx-auto 
+              shadow-lg
+              disabled:opacity-60 
+              disabled:cursor-not-allowed
+              justify-center
+              w-[30%] md:w-[15%]
+              flex items-center space-x-2 text-white font-bold bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full hover:from-purple-500 hover:to-blue-500 transition
+            "
+          >
+            {loading ? (
+              <span className="animate-pulse tracking-widest">SENDING...</span>
+            ) : (
+              "SEND"
+            )}
+          </button>
+        </div>
       </form>
     </div>
-    <div className="flex justify-center mt-0 mb-4">
-        {/* SEND BUTTON */}
-        <button
-          type="submit"
-          disabled={loading}
-          className="
-            mx-auto 
-            shadow-lg
-            disabled:opacity-60 
-            disabled:cursor-not-allowed
-            justify-center
-            w-[30%] md:w-[15%]
-            flex items-center space-x-2 text-white font-bold bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full hover:from-purple-500 hover:to-blue-500 transition
-          "
-        >
-          {loading ? (
-            <span className="animate-pulse tracking-widest">SENDING...</span>
-          ) : (
-            "SEND"
-          )}
-        </button>
-      </div>
   </section>
   );
 };

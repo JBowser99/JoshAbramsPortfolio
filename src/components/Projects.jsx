@@ -173,19 +173,20 @@ return (
         </div>
 
         {/* Image Title and Description */}
-        <div className="text-center text-white">
+        <div className="text-center text-white mt-2 m-4 p-2 shadow-black/40 shadow-md rounded-2xl border-2 border-white/5">
           <h3 className="text-lg font-bold">{images[currentIndex].title}</h3>
-          <p className="text-gray-300 text-sm p-4">{images[currentIndex].description}</p>
+          <p className="text-gray-300 text-sm">{images[currentIndex].description}</p>
         </div>
       </div>
 
       {/* Project Summary */}
-      <div className="bg-slate-950/30 border border-slate-950/20 rounded-xl flex flex-col p-4 sm:p-6 lg:p-8 mx-4 mt-4">
-        <h3 className="text-xl font-bold text-white">Project Summary</h3>
-        <p className="text-gray-300">
-          Explore each project with a visually dynamic and interactive interface. Snappy transitions
-          and smooth navigation ensure a professional and engaging user experience.
-        </p>
+      <div className="bg-slate-950/30 border border-slate-950/20 rounded-xl flex flex-col sm:p-6 lg:p-8 mx-4 mt-2">
+        <div className="text-center text-white m-4 p-2 shadow-black/40 shadow-md rounded-2xl border-2 border-white/5">
+          <h3 className="text-xl font-bold text-white">Project Summary</h3>
+          <p className="text-gray-300">
+            A modern React + Firebase application featuring secure authentication, GCP Coldline bucket integration, and an admin control dashboard. The dual-layer storage system provides real-time, in-app file management while also enabling seamless transfer of files to a secure Coldline bucket for off-site, long-term storage. This architecture enhances data durability and security by isolating off-site storage from the primary application environment. Used Terraform for a secure infrastructure as code tool to deploy the coldline GCP bucket in google cloud products.
+          </p>
+        </div>
       </div>
 
       {/* GitHub Link */}
